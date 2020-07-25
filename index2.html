@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+      <a class="navbar-brand" href="#">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.8y96xAgAehGjEVdflEOMGQHaHN&pid=Api&P=0&w=159&h=156" 
+          width="30"
+          height="30" 
+          alt="" 
+          loading="lazy" />
+      </a>
+
+      <a class="navbar-brand" href="#">CryptoBit</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index2.html" style="display: none;">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link loggedIn" href="#" style="display: none;">Market</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link loggedIn" href="dashboard.html" style="display: none;">Dashboard</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item loggedIn" href="#" style="display: none;">Account</a>
+              <a class="dropdown-item" href="#">Site Info</a>
+              <a class="dropdown-item" href="#">About Us</a>
+              <a class="dropdown-item" href="#">Blog Us</a>
+              <a class="dropdown-item loggedIn" id="logout" style="display: none;">Log Out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary loggedOut" data-toggle="modal" data-target="#exampleModal">
+          SIGN UP
+        </button>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary loggedOut" data-toggle="modal" data-target="#exampleModal2">
+          SIGN IN
+        </button>
+      </div>
+    </nav>
+    
+    <div class="row">
+      <div class="col" style="height: 20px; border: 2px solid black;"></div>
+    </div>
+  </div>
+
+
+
+
+<!-- Modal SIGN UP-->
+
+
+<div class="modal fade modalSignUp" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- sign up form -->
+        <form id="signupForm">
+          <div>
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Modal sign in-->
+
+
+
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- sign in form -->
+        <form id="signinForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="signinEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">Please sign in with your usual email</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="signinPassword" placeholder="Password">
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+</div>
+  
+
+  <!-- Firebse JS SDK -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCInM3op5WKAa4Btc6FwDSeIq9mOdyNXSA",
+      authDomain: "cryptoappp.firebaseapp.com",
+      databaseURL: "https://cryptoappp.firebaseio.com",
+      projectId: "cryptoappp",
+      storageBucket: "cryptoappp.appspot.com",
+      messagingSenderId: "823591748654",
+      appId: "1:823591748654:web:fab3eb977ad4c355c60bbf",
+      measurementId: "G-LV2V2T0TSG",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    //made auth and firestore reference
+    const auth = firebase.auth();
+    const dataBase = firebase.firestore();
+
+
+  </script>
+
+  <script src="scripts/index.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
