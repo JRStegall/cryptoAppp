@@ -28,6 +28,14 @@ img {
     margin: 0 auto;
 }
 
+.col {
+    margin: 0 auto;
+}
+
+.mb-3{
+    height: 200px;
+}
+
 #signIn {
     width: 50%;
     margin-bottom: 5%;
