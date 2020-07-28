@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+       
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="text" href="index.html">
+    
+</head>
+    <body>
+        <div container>
+        <div class="chartHolder"> Live Watchlist</div> 
+        <button class="btn btn-success" id="liveChartbtn">Trade Now</button> 
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            console.log("ready!");
+
+            var chartHolder = document.getElementById("chartHolder");
+        
+            $.get("https://api.nomics.com/v1/currencies/ticker?key=afa8436d939ae06b4604b0939a47b034", function (data) {
+           
+            console.log("The response from the api ticker");
+            console.log(data);
+            console.log(data.message);
+
+            function appenedChart(data) {
+            var imageElement = document.createElement("div");
+            imageElement.src= data.message;
+            imageElement.style.height="200px";
+            imageElement.style.width="200px";
+            
+            chartHolder.appendChild(imageElement);
+            }
+        });
+    }); 
+
+    </script>
+ </body>
+</html>
