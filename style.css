@@ -1,17 +1,43 @@
-html {
-    height: 100vh;
+body {
+    height: auto;
     /*display: flex;*/
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(rgb(156, 221, 230), rgb(48,62,143));
-    color: white;
+
 }
 
-.container {
-    padding: 2%;
+img {
+    padding-top: 5%;
 }
 
+.card-title {
+    text-decoration: underline;
+}
+
+.dropdown-item:hover{
+    background-color: rgb(81, 199, 235);
+}
 .btn {
     margin-left: 5px;
+    margin-top: 5%;
+}
+
+.card {
+    margin: 0 auto;
+}
+
+.col {
+    margin: 0 auto;
+}
+
+.mb-3{
+    height: 200px;
+}
+
+#signIn {
+    width: 50%;
+    margin-bottom: 5%;
+    margin-top: 2%;
 }
