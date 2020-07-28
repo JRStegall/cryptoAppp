@@ -1,23 +1,38 @@
+function placeHolderChart() {
+    
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: [0],
+            datasets: [{
+                label: "BitCoin Monthly Trend",
+                backgroundColor: 'rgb(245, 87, 66)',
+                borderColor: 'rgb(75, 66, 245)',
+                data: [0],
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: false
+                            }
+                        }]
+                    }
+                }
+    });
 
 
-// This will be where my data goes
 
+} 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//This is where the Daily Chart is Generated
 
 async function createDailyChart() {
 
@@ -42,25 +57,11 @@ async function createDailyChart() {
     async function getData() {
         const response = await fetch("https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=BTC&market=USD&apikey="+apikey);
         const data = await response.json();
-       
-        
-        //ibmDataOpen.push((data["Weekly Time Series"]["2020-07-27"][["1. open"]]))
-        // ibmDataClose.push((data["Weekly Time Series"]["2020-07-27"][["4. close"]]))
-        // console.log(data["Meta Data"])
-        // console.log(data["Weekly Time Series"]["2020-07-27"])
-        // console.log(data["Weekly Time Series"]["2020-07-27"][["1. open"]])
     
-       
-   
         
         //this lets me know about the object length
         let size = Object.keys(data["Time Series (Digital Currency Daily)"])
-        // console.log(data["Weekly Time Series"])
-        // console.log(data["Weekly Time Series"][size[0]])
-        // console.log(data["Weekly Time Series"][size[0]]["1. open"])
-    
-        // console.log(size[0][1])
-        // console.log(size[1])
+  
         
      
         //Market Open for Bitcoin
@@ -76,7 +77,7 @@ async function createDailyChart() {
         
         
         dailyData.close = (data["Time Series (Digital Currency Daily)"][size[0]]["4. close"])
-        // console.log(`daily data updated in get data function: ${dailyData.open}`)
+        
 
        
         
@@ -92,53 +93,6 @@ async function createDailyChart() {
     
     await getData()
     
-    
-    
-    // console.log(`This is Daily Data.Open ${dailyData.open}`)
-    
-    
-    // let crytoChart = new Chart(myChart, {
-    //     type: 'line',
-    //     data: {
-    //         labels: ['BitCoin'],
-    //         datasets: [{
-    //             label: 'CyptoCurrency Price Per Day',
-    //             data: [dailyData.open, dailyData.close],
-    //             backgroundColor: [
-    //                 'rgba(255, 99, 132, 0.2)',
-    //                 'rgba(54, 162, 235, 0.2)',
-    //                 'rgba(255, 206, 86, 0.2)',
-    //                 'rgba(75, 192, 192, 0.2)',
-    //                 'rgba(153, 102, 255, 0.2)',
-    //                 'rgba(255, 159, 64, 0.2)'
-    //             ],
-    //             borderColor: [
-    //                 'rgba(255, 99, 132, 1)',
-    //                 'rgba(54, 162, 235, 1)',
-    //                 'rgba(255, 206, 86, 1)',
-    //                 'rgba(75, 192, 192, 1)',
-    //                 'rgba(153, 102, 255, 1)',
-    //                 'rgba(255, 159, 64, 1)'
-    //             ],
-    //             borderWidth: 1,
-    //             borderColor:"#777",
-    //             hoverBorderWidth: 3,
-    //             hoverBorderColor: "#000"
-    //         }]
-    //     },
-    //     options: {
-    //         scales: {
-    //             yAxes: [{
-    //                 ticks: {
-    //                     beginAtZero: false
-    //                 }
-    //             }]
-    //         }
-    //     }
-    // });
-    
-
-
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -154,8 +108,6 @@ async function createDailyChart() {
                 data: [dailyData.open4,dailyData.open3, dailyData.open2, dailyData.open1, dailyData.open],
             }]
         },
-
-        // Configuration options go here
         options: {}
     });
 
@@ -195,13 +147,7 @@ async function createWeeklyChart() {
         
         //this lets me know about the object length
         let size = Object.keys(data["Time Series (Digital Currency Weekly)"])
-        // console.log(data["Weekly Time Series"])
-        // console.log(data["Weekly Time Series"][size[0]])
-        // console.log(data["Weekly Time Series"][size[0]]["1. open"])
     
-        // console.log(size[0][1])
-        // console.log(size[1])
-        
      
         //Market Open for Bitcoin
         weeklyData.open = (data["Time Series (Digital Currency Weekly)"][size[0]]["1a. open (USD)"]);
@@ -232,13 +178,8 @@ async function createWeeklyChart() {
     await getData()
     
     
-    
-    // console.log(`This is Daily Data.Open ${dailyData.open}`)
-    
-   
-    
 
-
+    //This is where the chart is generated
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -259,9 +200,6 @@ async function createWeeklyChart() {
         options: {}
     });
 
-
-    
-   
 
 }
 
@@ -294,15 +232,7 @@ async function createMonthlyChart() {
         
         //this lets me know about the object length
         let size = Object.keys(data["Time Series (Digital Currency Monthly)"])
-        // console.log(data["Weekly Time Series"])
-        // console.log(data["Weekly Time Series"][size[0]])
-        // console.log(data["Weekly Time Series"][size[0]]["1. open"])
-    
-        // console.log(size[0][1])
-        // console.log(size[1])
-        
-
-        
+      
      
         //Market Open for Bitcoin
         monthlyData.open = (data["Time Series (Digital Currency Monthly)"][size[0]]["1a. open (USD)"]);
@@ -322,21 +252,11 @@ async function createMonthlyChart() {
         monthlyData.day2 = size[2]
         monthlyData.day3= size[3]
         monthlyData.day4 = size[4]
-
-        
-       
-       
         
       
     }
     
     await getData()
-    
-    
-    
-    // console.log(`This is Daily Data.Open ${dailyData.open}`)
-    
-   
     
 
 
@@ -374,9 +294,9 @@ async function createMonthlyChart() {
 
 }
 
+placeHolderChart()
 
-
-createMonthlyChart()
+//Here is the button fuctionality. 
 
 let dailyButton = document.getElementById("bitCoinDaily")
 let weeklyButton = document.getElementById("bitCoinWeekly")
