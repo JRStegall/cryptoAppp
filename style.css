@@ -42,18 +42,8 @@ img {
     margin-top: 2%;
 }
 
-#searchBar {
-    width: 100%;
-    height: 32px;
-    border-radius: 3px;
-    border: 1px solid #eaeaea;
-    padding: 3px 5px;
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-#buttonWrapper {
+.card-body{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-
