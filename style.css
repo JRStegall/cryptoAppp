@@ -1,18 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Source+Sans+Pro:wght@300&display=swap');
+
+
 body {
+    overflow-x: hidden;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #7f1f7f;
     height: auto;
     /*display: flex;*/
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(rgb(156, 221, 230), rgb(48,62,143));
-
+    
 }
 
 img {
-    padding-top: 5%;
+    height: 2rem;
 }
 
-.card-title {
+
+.navbar{
+    text-transform: uppercase;
+    font-size: 800;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    background: rgba(0 0,0,.5)!important;
+
+}
+
+.navbar-nav li {
+    padding-top: .5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    padding-top: .6rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #7f1f77
+}
+
+
+/* landing page  */
+
+.home-inner {
+    background-image: url(img/static.jpeg);
+}
+
+.caption {
+    
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 40%;
+    /* Z index will let me display over content just FYI */
+    z-index: 1;
+    color: white;
+    text-transform: uppercase;
+    font-size: 8rem;
+   
+}
+
+.caption h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: .1rem;
+    color: #7f1f77;
+    text-shadow: .1rem, .1rem, .6rem black;
+}
+
+.caption h4 {
+    font-size: 3rem;
+    text-shadow: .1rem, .1rem, .6rem black;
+    color: #7f1f77;
+}
+
+btn-lg {
+   font-size: 2rem;
+   border-radius: 0;
+   
+}
+
+
+
+/* .card-title {
     text-decoration: underline;
 }
 
@@ -46,4 +120,4 @@ img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+} */

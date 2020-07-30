@@ -1,43 +1,264 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
-        crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <link rel="text" href="dashboard.html">
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleRework.css">
+  <link rel="stylesheet" href="mainPage.css">
+
+  <link rel="text" href="dashboard.html">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</head>
+
+
+
+<body data-spy="scroll" data-target="#navbarResponsive">
+
+  <!--This part of the code will navigate to HOME  -->
+  <div id="home" class="offset">
+
+    <!-- START NAV -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://img.icons8.com/dusk/64/000000/bitcoin.png" width="30px"
+          height="30px" alt="" loading="lazy" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#whyCrypto">Why Crytpo</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Team</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#tech">Tech</a>
+          </li>
+
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="#signin">Sign In</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- END NAV -->
+
+    <!-- START WELCOME PAGE -->
+
+    <div class="landing">
+      <div class="home-wrap">
+        <div class="home-inner">
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="caption text-center">
+      <h1 class="display-4">CryptoApp</h1>
+      <h4 class="lead">Investor's Top Info Site</h4>
+      <a class="btn btn-outline-light btn-lg" href="#signUp">Sign Up</a>
+
+    </div>
+
+
+    <!-- END LANDING PAGE -->
+
+
+    <!-- STARTE WHYCRYPTO SECTOIN OF PAGE -->
+    <div id="whyCrypto" class="offset">
+      <div class="jumbotron">
+        <div class="narrow">
+
+          <div class="col-12 text-center">
+            <h2 class="heading">Why Crypto App</h2>
+          </div>
+
+          <div class="row text-center">
+            <div class="col-md-4">
+              <div class="whyCrypto">
+                <i class="fab fa-bitcoin fa-4x" data-fa-transform></i>
+                <h3>Historical Data</h3>
+                <p>Use our API-driven chart feature to view your favorite cryptocurreny past data</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="whyCrypto">
+                <i class="far fa-newspaper fa-4x" data-fa-transform></i>
+                <h3>Real News - Now</h3>
+                <p>Gain Access to all the latest news</p>
+              </div>
+            </div>
+
+
+            <div class="col-md-4">
+              <div class="whyCrypto">
+                <i class="fas fa-table fa-4x" data-fa-transform></i>
+                <h3>Cryto Ticker Table</h3>
+                <p>Watch Top Crypto Currency Values</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- END WHY CRYPTO PAGE SECTION -->
+
+    <!-- START OF TEAM SECTION -->
+    <div class="team" class="offset">
+
+      <div class="fixed-background">
+
+        <div class="row-dark text-center">
+            <div class="col-12 text-center">
+              <h3 class="heading">Team</h3>
+              
+            </div>
+            <div class="row text center">
+              <div class="col-md-4">
+                <div class="team">
+                <h3>Jeremy</h3>
+                <img src="img/Jeremy.jpeg" alt="..." class="img-thumbnail">
+                <p class="lead text-muted">fdafad</p>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="team">
+                <h3>Camille</h3>
+                <img src="img/Camille.jpeg" alt="..." class="img-thumbnail">
+                <p class="lead text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut delectus ipsam, aspernatur illum aliquam accusantium dignissimos sed minus incidunt rem.</p>
+                </div>  
+              </div>
+
+              <div class="col-md-4">
+                <div class="team">
+                <h3>Bryan</h3>
+                <img src="img/bryan.jpeg" alt="..." class="img-thumbnail">
+                <p class="lead text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut delectus ipsam, aspernatur illum aliquam accusantium dignissimos sed minus incidunt rem.</p>
+                </div>  
+              </div>
+            </div>
+
+        </div>
+
+        <div class="fixed-wrap">
+          <div class="fixed">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- END OF TEAM SECTION -->
+
+  <!-- START OF TECH -->
+
+  <div id="tech" class="offset">
+    <div class="jumbotron">
+      <div class="narrow">
+
+        <div class="col-12 text-center">
+          <h2 class="heading">Under The Hood</h2>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="tech">
+              <i class="fab fa-html5 fa-4x" data-fa-transform></i>
+              <h3>HTML5</h3>
+              <p class="text-muted">The backbone of our website.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="team">
+              <i class="fab fa-bootstrap fa-4x" data-fa-transform></i>
+              <h3>BOOTSTRAP</h3>
+              <p class="lead">Using the latest open source CSS framework allows our website to be responsive and beautiful to use</p>
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="team">
+              <i class="fab fa-js-square fa-4x" data-fa-transform></i>
+              <h3>JAVASCRIPT</h3>
+              <p class="text-muted">This language of choice allows us to dynamically modify the webpage to provide better user experience</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+<!-- END OF TECH -->
 
 
 
 
+<!-- START OF FOOTER -->
 
-    
-    <body data-spy="scroll" data-target="#navbarResponsive">    
-      
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="moreInfo" class="offset">
 
-        <a class="navbar-brand" href="#">
-          <img src="https://tse1.mm.bing.net/th?id=OIP.8y96xAgAehGjEVdflEOMGQHaHN&pid=Api&P=0&w=159&h=156" 
-            width="30"
-            height="30" 
-            alt="" 
-            loading="lazy" />
-        </a>
-  
-        <a class="navbar-brand" href="#">CryptoBit</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<footer>
+  <div class="row justify-content-center">
+
+    <div class="col-md-5 text-center">
+      <img src="https://img.icons8.com/dusk/64/000000/bitcoin.png" style="height: 100px;">
+      <p> Thank you for stopping by our website. Please feel free to reach out!</p>
+    </div>
+
+
+  </div>
+</footer>
+
+
+</div>
+
+  <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
               <a class="nav-link" href="index2.html" style="display: none;">Home<span class="sr-only">(current)</span></a>
@@ -63,8 +284,8 @@
             </li>
           </ul>
         </div>
-        <div>
-          <button type="button" class="btn btn-primary loggedOut" data-toggle="modal" data-target="#exampleModal">
+        <div> -->
+  <!-- <button type="button" class="btn btn-primary loggedOut" data-toggle="modal" data-target="#exampleModal">
             SIGN UP
           </button>
         </div>
@@ -73,7 +294,41 @@
             SIGN IN
           </button>
         </div>
-      </nav>
+      </nav> -->
+
+
+
+  <!-- This is the End of Nav Bar -->
+
+  </div>
+  <!-- End Home Scrolling -->
+
+
+
+
+
+
+
+  <!-- Start CyptoApp -->
+  <div id="cryptoApp" class="offset">
+
+
+
+
+
+  </div>
+  <!-- End CryptoApp -->
+
+
+
+
+  <!-- Start Team -->
+  <div id="team" class="offset">
+
+
+
+  </div>
+  <!-- End Team -->
 
 
 
@@ -85,203 +340,419 @@
 
 
 
+  <!-- <div class="container container-fluid">
+    <div class="row">
+      <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
+        <img
+          src="http://www.ruleoneinvesting.com/wp-content/uploads/2014/11/stock-market-trends-what-causes-stock-prices-to-change.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Stocks & Options</h5>
+          <p class="card-text">Pop on over and check out what the current market is doing in real time.</p>
+          <br>
+          <a href="https://www.marketwatch.com/investing/index/spx" target="_blank"
+            class="btn btn-primary">MarketWatch</a>
+        </div>
+      </div>
+      <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.GinTellswMwCgoOYXGct6gHaE8&pid=Api&P=0&w=242&h=162"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">ETF</h5>
+          <p class="card-text">Exchange Traded Fund... What is it? How can you benefit?</p>
+          <br>
+          <br>
+          <br>
+          <a href="https://www.investopedia.com/terms/e/etf.asp" target="_blank" class="btn btn-primary">Find Out
+            More</a>
+        </div>
+      </div>
+      <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.NrjMYSbBzIrVKXFCmhFD2AHaEZ&pid=Api&P=0&w=288&h=172"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Cryptocurrency</h5>
+          <p class="card-text">Strong cryptography. Decentralized Control. Distributed blockchain ledger.</p>
+          <br>
+          <br>
+
+          <a href="https://coinmarketcap.com/" target="_blank" class="btn btn-primary">Coin Market</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-10" style="color: white;">
+        <h4>Have other questions? &nbsp;Let us help you! &nbsp; Sign Up or Log In!</h4>
+      </div>
+    </div>
+  </div> -->
 
 
+  <!-- <div class="modal fade modalSignUp" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"> -->
 
-
-
-          <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border">
-            <a class="navbar-brand" href="#">
-              <img src="https://tse1.mm.bing.net/th?id=OIP.8y96xAgAehGjEVdflEOMGQHaHN&pid=Api&P=0&w=159&h=156" width="30" height="30" alt="" loading="lazy">
-            </a>
-            <a class="navbar-brand" href="#">CryptoBit</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="dashboard.html">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Market</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">FAQ</a>
-                    <a class="dropdown-item" href="#">Site Info</a>
-                    <a class="dropdown-item" href="#">About Us</a>
-                    <a class="dropdown-item" href="#">Blog Us</a>
-                  </div>
-                </li>
-              </ul>
+  <!-- sign up form -->
+  <!-- <form id="signupForm">
+            <div>
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-            <a href="crypto.html"><button type="button" class="btn btn-primary">Sign Up</button></a>
-            <br>
-            <a href="crypto.html"><button type="button" class="btn btn-primary">Sign In</button></a>
-          </nav> -->
-    
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+            </div>
 
-      
-    <div class="container container-fluid">
-      <div class="row">
-        <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
-          <img src="http://www.ruleoneinvesting.com/wp-content/uploads/2014/11/stock-market-trends-what-causes-stock-prices-to-change.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Stocks & Options</h5>
-            <p class="card-text">Pop on over and check out what the current market is doing in real time.</p>
-            <br>
-            <a href="https://www.marketwatch.com/investing/index/spx" target="_blank" class="btn btn-primary">MarketWatch</a>
-          </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+
+
         </div>
-        <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
-          <img src="https://tse4.mm.bing.net/th?id=OIP.GinTellswMwCgoOYXGct6gHaE8&pid=Api&P=0&w=242&h=162" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">ETF</h5>
-            <p class="card-text">Exchange Traded Fund... What is it?  How can you benefit?</p>
-            <br>
-            <br>
-            <br>
-            <a href="https://www.investopedia.com/terms/e/etf.asp" target="_blank" class="btn btn-primary">Find Out More</a>
-          </div>
-        </div>
-        <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
-          <img src="https://tse3.mm.bing.net/th?id=OIP.NrjMYSbBzIrVKXFCmhFD2AHaEZ&pid=Api&P=0&w=288&h=172" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Cryptocurrency</h5>
-            <p class="card-text">Strong cryptography.  Decentralized Control.  Distributed blockchain ledger.</p>
-            <br>
-            <br>
-            
-            <a href="https://coinmarketcap.com/" target="_blank" class="btn btn-primary">Coin Market</a>
-          </div>
-        </div>
-      </div>
-      <div class="row"> 
-        <div class="col col-10" style="color: white;">
-          <h4>Have other questions?  &nbsp;Let us help you!  &nbsp; Sign Up or Log In!</h4>
-        </div>
+
       </div>
     </div>
+  </div> -->
+
+  <!-- Modal sign in-->
 
 
-    <div class="modal fade modalSignUp" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            
-            <!-- sign up form -->
-            <form id="signupForm">
-              <div>
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="signupPassword" placeholder="Password">
-              </div>
-              
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-    
-    
-    
-          </div>
-          
+
+
+  <!-- <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body"> -->
+
+  <!-- sign in form -->
+  <!-- <form id="signinForm">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="signinEmail" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">Please sign in with your usual email</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="signinPassword" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+
+
+        </div>
+
       </div>
     </div>
-    
-    <!-- Modal sign in-->
-    
-    
-    
-    
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            
-            <!-- sign in form -->
-            <form id="signinForm">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="signinEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">Please sign in with your usual email</small>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="signinPassword" placeholder="Password">
-              </div>
-              
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-    
-    
-    
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    
-          
-        </div>
-      </div>
-    </div>
-  
+  </div>
 
 
-    <!-- This script tags are needed in order to have firebase to work -->
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyCInM3op5WKAa4Btc6FwDSeIq9mOdyNXSA",
-        authDomain: "cryptoappp.firebaseapp.com",
-        databaseURL: "https://cryptoappp.firebaseio.com",
-        projectId: "cryptoappp",
-        storageBucket: "cryptoappp.appspot.com",
-        messagingSenderId: "823591748654",
-        appId: "1:823591748654:web:fab3eb977ad4c355c60bbf",
-        measurementId: "G-LV2V2T0TSG",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-  
-      //made auth and firestore reference
-      const auth = firebase.auth();
-      const dataBase = firebase.firestore();
-  
-  
-    </script>
-  
-    <script src="scripts/index.js"></script>
-    <script src="scripts/auth.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
-  </body>
+  </div>
+  </div>
+  </div> -->
+
+
+
+  <!-- This script tags are needed in order to have firebase to work -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCInM3op5WKAa4Btc6FwDSeIq9mOdyNXSA",
+      authDomain: "cryptoappp.firebaseapp.com",
+      databaseURL: "https://cryptoappp.firebaseio.com",
+      projectId: "cryptoappp",
+      storageBucket: "cryptoappp.appspot.com",
+      messagingSenderId: "823591748654",
+      appId: "1:823591748654:web:fab3eb977ad4c355c60bbf",
+      measurementId: "G-LV2V2T0TSG",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    //made auth and firestore reference
+    const auth = firebase.auth();
+    const dataBase = firebase.firestore();
+
+
+  </script>
+
+  <script src="scripts/index.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+</body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index2.html" style="display: none;">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link loggedIn" href="#" style="display: none;">Market</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link loggedIn" href="dashboard.html" style="display: none;">Dashboard</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item loggedIn" href="#" style="display: none;">Account</a>
+                <a class="dropdown-item" href="#">Site Info</a>
+                <a class="dropdown-item" href="#">About Us</a>
+                <a class="dropdown-item" href="#">Blog Us</a>
+                <a class="dropdown-item loggedIn" id="logout" style="display: none;">Log Out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+      </nav> -->
+
+
+
+<!-- This is the End of Nav Bar -->
+
+</div>
+<!-- End Home Scrolling -->
+
+
+
+
+
+
+
+<!-- Start CyptoApp -->
+<div id="cryptoApp" class="offset">
+
+
+
+
+
+</div>
+<!-- End CryptoApp -->
+
+
+
+
+<!-- Start Team -->
+<div id="team" class="offset">
+
+
+
+</div>
+<!-- End Team -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container container-fluid">
+  <div class="row">
+    <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
+      <img
+        src="http://www.ruleoneinvesting.com/wp-content/uploads/2014/11/stock-market-trends-what-causes-stock-prices-to-change.jpg"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Stocks & Options</h5>
+        <p class="card-text">Pop on over and check out what the current market is doing in real time.</p>
+        <br>
+        <a href="https://www.marketwatch.com/investing/index/spx" target="_blank"
+          class="btn btn-primary">MarketWatch</a>
+      </div>
+    </div>
+    <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.GinTellswMwCgoOYXGct6gHaE8&pid=Api&P=0&w=242&h=162"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ETF</h5>
+        <p class="card-text">Exchange Traded Fund... What is it? How can you benefit?</p>
+        <br>
+        <br>
+        <br>
+        <a href="https://www.investopedia.com/terms/e/etf.asp" target="_blank" class="btn btn-primary">Find Out
+          More</a>
+      </div>
+    </div>
+    <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.NrjMYSbBzIrVKXFCmhFD2AHaEZ&pid=Api&P=0&w=288&h=172"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cryptocurrency</h5>
+        <p class="card-text">Strong cryptography. Decentralized Control. Distributed blockchain ledger.</p>
+        <br>
+        <br>
+
+        <a href="https://coinmarketcap.com/" target="_blank" class="btn btn-primary">Coin Market</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-10" style="color: white;">
+      <h4>Have other questions? &nbsp;Let us help you! &nbsp; Sign Up or Log In!</h4>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade modalSignUp" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"> -->
+
+<!-- sign up form -->
+<!-- <form id="signupForm">
+          <div>
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp"
+              placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div> -->
+
+<!-- Modal sign in-->
+
+
+
+<!-- 
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"> -->
+
+<!-- sign in form -->
+<!-- <form id="signinForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="signinEmail" aria-describedby="emailHelp"
+              placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">Please sign in with your usual email</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="signinPassword" placeholder="Password">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+</div> -->
+
+
+
+<!-- This script tags are needed in order to have firebase to work -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCInM3op5WKAa4Btc6FwDSeIq9mOdyNXSA",
+    authDomain: "cryptoappp.firebaseapp.com",
+    databaseURL: "https://cryptoappp.firebaseio.com",
+    projectId: "cryptoappp",
+    storageBucket: "cryptoappp.appspot.com",
+    messagingSenderId: "823591748654",
+    appId: "1:823591748654:web:fab3eb977ad4c355c60bbf",
+    measurementId: "G-LV2V2T0TSG",
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  //made auth and firestore reference
+  const auth = firebase.auth();
+  const dataBase = firebase.firestore();
