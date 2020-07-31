@@ -6,7 +6,12 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
         crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="dashboardstyle.css">
+       
+        <link rel="stylesheet" href="mainPage.css">
+
+
 
         <link rel="text" href="index.html">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
@@ -15,47 +20,87 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
     <body>
+<!-- START NAV -->
 
-          
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-              <img src="https://tse1.mm.bing.net/th?id=OIP.8y96xAgAehGjEVdflEOMGQHaHN&pid=Api&P=0&w=159&h=156" width="30" height="30" alt="" loading="lazy">
-            </a>
-            <a class="navbar-brand" href="#">CryptoBit</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="index.html">
+    <img src="https://img.icons8.com/dusk/64/000000/bitcoin.png" width="30px"
+      height="30px" alt="" loading="lazy" />
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="dashboard.html">Dashboard</a>
-                </li>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
 
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Market</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">FAQ</a>
-                    <a class="dropdown-item" href="#">Site Info</a>
-                    <a class="dropdown-item" href="#">About Us</a>
-                    <a class="dropdown-item" href="#">Blog Us</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
+      <li class="nav-item">
+        <a class="nav-link loggedOut"  href="#home">Home</a>
+      </li>
 
-          </nav>
-    <div class="container-fluid"  style="border: 2px solid black;">
-        <h1>Dashboard</h1>
-        <div class="row">
+      <li class="nav-item">
+        <a class="nav-link loggedOut"  style="display: none;"  href="#whyCrypto">Why Crytpo</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link loggedOut"  style="display: none;"  href="#team">Team</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link loggedOut" style="display: none;"  href="#tech">Tech</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link loggedIn"  style="display: none;" href="/cryptoAppp/dashboard.html">Dashboard</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"  id = "signinform" href="#signin"  class="loggedOut" data-toggle="modal" data-target="#exampleModal2" >Sign In</a>
+      </li>
+
+
+      <li class="nav-item dropdown" class="loggedIn" style="display: none;">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item loggedIn" href="#" >Account</a>
+          <a class="dropdown-item loggedIn" id="logout">Log Out</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="landing2">
+        <div class="home-wrap2">
+          <div class="home-inner2">
+  
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="caption text-center">
+        <h1 class="display-4"></h1>
+        <h4 class="lead"></h4>
+       
+      
+  
+      </div>
+  
+      <!-- START WHYCRYPTO SECTOIN OF PAGE -->
+    <div id="whyCrypto" class="offset">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="narrow">
+
+          <div class="col-12 text-center">
+            <h2 class="heading">Dashboard</h2>
+          </div>
+          <div class="col-12">
+          <div class="row">
             <div class="col col-12 col-md-7">
                 <div class="row">
                     <div class="col border mb-5" id="stocks">
@@ -82,16 +127,54 @@
             </div>
             
             <div class="col col-12 col-md-4 border" id="chartHolder">
-              
-                  
+              <canvas id="myTickerChart" width="1000" height="1100"></canvas>
+              <div id="buttonWrapper">
+                <button type="button" id="loadTickerChart" class="btn btn-outline-primary btn-lg">Load Data</button>
+              </div>
             </div>
+          </div>
+          </div>
+
         </div>
-    </div> 
+      </div>
+
+
+    </div>
+
+
+    <!-- This script tags are needed in order to have firebase to work -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCInM3op5WKAa4Btc6FwDSeIq9mOdyNXSA",
+      authDomain: "cryptoappp.firebaseapp.com",
+      databaseURL: "https://cryptoappp.firebaseio.com",
+      projectId: "cryptoappp",
+      storageBucket: "cryptoappp.appspot.com",
+      messagingSenderId: "823591748654",
+      appId: "1:823591748654:web:fab3eb977ad4c355c60bbf",
+      measurementId: "G-LV2V2T0TSG",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    //made auth and firestore reference
+    const auth = firebase.auth();
+    const dataBase = firebase.firestore();
+
+
+  </script>
+    <script src="scripts/userauth.js"></script>
+    <script src="scripts/index.js"></script>
     <script src="scripts/script.js"></script>
     <script src ="scripts/market.js"></script>
     <script src="scripts/chart.js"></script>
     <script src="scripts/auth.js"></script>
-    <script src="scripts/index.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
 
     </body>

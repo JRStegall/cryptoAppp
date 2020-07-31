@@ -10,7 +10,7 @@ auth.onAuthStateChanged(user => {
     } else {
         setupUI()
         console.log("User is now logged off")
-
+        
     }
 })
 
@@ -55,6 +55,7 @@ loginForm.addEventListener("submit", (event) => {
 
     auth.signInWithEmailAndPassword(email, password).then(credential => {
         
-        signinForm.reset();
+        window.location.href = "http://127.0.0.1:5500/cryptoAppp/dashboard.html"
     });
 })
+

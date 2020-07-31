@@ -12,8 +12,8 @@ body {
     flex-direction: column;
     align-items: center;
     /* background: linear-gradient(rgb(156, 221, 230), rgb(48,62,143)); */
-    background-color: #343a40;
-    
+    background-color: #d4dde7;
+    padding-bottom: 4rem;
 }
 
 img {
@@ -32,6 +32,7 @@ img {
     font-size: 1.3rem;
     letter-spacing: .1rem;
     background: rgba(0 0,0,.5)!important;
+    
 
 }
 
@@ -62,7 +63,7 @@ img {
     text-transform: uppercase;
 }
 
-.home-inner {
+.home-inner2 {
     background-image: url(img/static.jpeg);
 }
 
@@ -82,18 +83,17 @@ img {
 }
 
 .caption h1 {
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 900;
     letter-spacing: .1rem;
-    color: #ba35ba;
-    text-shadow: .1rem, .1rem, .6rem rgb(139, 59, 131);
+    color: #7f1f77;
+    text-shadow: .1rem, .1rem, .6rem black;
 }
 
 .caption h4 {
-    font-size: 5rem;
+    font-size: 3rem;
     text-shadow: .1rem, .1rem, .6rem black;
-    color: #d443d4;
-    border-color: purple;
+    color: #7f1f77;
 }
 
 btn-lg {
@@ -102,8 +102,12 @@ btn-lg {
    
 }
 
-.jumbotron {
+.jumbotron-fluid {
     border-radius: 0;
+    /* background-image: url(/cryptoAppp/img/static.jpeg); */
+    background-size: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, .1);
 }
 
 .fixed {
@@ -181,5 +185,5 @@ btn-lg {
 
 .container-fluid {
     background-color: rgba(0,0,0, .1);
+    
 }
-

@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styleRework.css">
   <link rel="stylesheet" href="mainPage.css">
 
   <link rel="text" href="dashboard.html">
@@ -45,25 +44,39 @@
         <ul class="navbar-nav ml-auto">
 
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link loggedOut"  href="#home">Home</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#whyCrypto">Why Crytpo</a>
+            <a class="nav-link loggedOut"  style="display: none;"  href="#whyCrypto">Why Crytpo</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#team">Team</a>
+            <a class="nav-link loggedOut"  style="display: none;"  href="#team">Team</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#tech">Tech</a>
+            <a class="nav-link loggedOut" style="display: none;"  href="#tech">Tech</a>
           </li>
 
-          
+          <li class="nav-item">
+            <a class="nav-link loggedIn"  style="display: none;" href="/cryptoAppp/dashboard.html">Dashboard</a>
+          </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#signin">Sign In</a>
+            <a class="nav-link"  id = "signinform" href="#signin"  class="loggedOut" data-toggle="modal" data-target="#exampleModal2" >Sign In</a>
+          </li>
+
+
+          <li class="nav-item dropdown" class="loggedIn" >
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item loggedIn" href="#" >Account</a>
+              <a class="dropdown-item loggedIn" id="logout">Log Out</a>
+            </div>
           </li>
 
         </ul>
@@ -86,7 +99,8 @@
     <div class="caption text-center">
       <h1 class="display-4">CryptoApp</h1>
       <h4 class="lead">Investor's Top Info Site</h4>
-      <a class="btn btn-outline-light btn-lg" href="#signUp">Sign Up</a>
+      <a class="btn btn-outline-light btn-lg loggedOut mt-5" href="#signUp" data-toggle="modal" data-target="#exampleModal" >Sign Up</a>
+    
 
     </div>
 
@@ -94,7 +108,7 @@
     <!-- END LANDING PAGE -->
 
 
-    <!-- STARTE WHYCRYPTO SECTOIN OF PAGE -->
+    <!-- START WHYCRYPTO SECTOIN OF PAGE -->
     <div id="whyCrypto" class="offset">
       <div class="jumbotron">
         <div class="narrow">
@@ -136,24 +150,27 @@
 
     </div>
 
+    
+
     <!-- END WHY CRYPTO PAGE SECTION -->
 
     <!-- START OF TEAM SECTION -->
     <div class="team" class="offset">
 
-      <div class="fixed-background">
+      <div class="fixed-background" id="dark">
 
-        <div class="row-dark text-center">
-            <div class="col-12 text-center">
+        <div class="row dark text-center">
+            
+          <div class="col-12 text-center">
               <h3 class="heading">Team</h3>
-              
-            </div>
+          </div>
+          
             <div class="row text center">
               <div class="col-md-4">
                 <div class="team">
                 <h3>Jeremy</h3>
                 <img src="img/Jeremy.jpeg" alt="..." class="img-thumbnail">
-                <p class="lead text-muted">fdafad</p>
+                <p class="lead pt-5">Hard worker! Utilized his knowledge of Javascript to provide CyrtoApp an advanced News tab. </p>
                 </div>
               </div>
 
@@ -161,7 +178,7 @@
                 <div class="team">
                 <h3>Camille</h3>
                 <img src="img/Camille.jpeg" alt="..." class="img-thumbnail">
-                <p class="lead text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut delectus ipsam, aspernatur illum aliquam accusantium dignissimos sed minus incidunt rem.</p>
+                <p class="lead pt-5">Hard Worker, Provides Great Ideas, Gets the job DONE!</p>
                 </div>  
               </div>
 
@@ -169,7 +186,7 @@
                 <div class="team">
                 <h3>Bryan</h3>
                 <img src="img/bryan.jpeg" alt="..." class="img-thumbnail">
-                <p class="lead text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut delectus ipsam, aspernatur illum aliquam accusantium dignissimos sed minus incidunt rem.</p>
+                <p class="lead pt-5">Meh. Nothing really special to say about this guy. Needs to utitlize Google by the minute to get stuff DONE!</p>
                 </div>  
               </div>
             </div>
@@ -241,7 +258,7 @@
 
 <!-- START OF FOOTER -->
 
-<div class="moreInfo" class="offset">
+<div class="moreInfo" class="offset" id="footer">
 
 <footer>
   <div class="row justify-content-center">
@@ -256,139 +273,17 @@
 </footer>
 
 
+
 </div>
-
-  <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index2.html" style="display: none;">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link loggedIn" href="#" style="display: none;">Market</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link loggedIn" href="dashboard.html" style="display: none;">Dashboard</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item loggedIn" href="#" style="display: none;">Account</a>
-                <a class="dropdown-item" href="#">Site Info</a>
-                <a class="dropdown-item" href="#">About Us</a>
-                <a class="dropdown-item" href="#">Blog Us</a>
-                <a class="dropdown-item loggedIn" id="logout" style="display: none;">Log Out</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div> -->
-  <!-- <button type="button" class="btn btn-primary loggedOut" data-toggle="modal" data-target="#exampleModal">
-            SIGN UP
-          </button>
-        </div>
-        <div>
-          <button type="button" class="btn btn-primary loggedOut" data-toggle="modal" data-target="#exampleModal2">
-            SIGN IN
-          </button>
-        </div>
-      </nav> -->
-
-
-
-  <!-- This is the End of Nav Bar -->
-
-  </div>
-  <!-- End Home Scrolling -->
+ 
+<!-- END OF FOOTER -->
 
 
 
 
+<!-- SIGN UP -->
 
-
-
-  <!-- Start CyptoApp -->
-  <div id="cryptoApp" class="offset">
-
-
-
-
-
-  </div>
-  <!-- End CryptoApp -->
-
-
-
-
-  <!-- Start Team -->
-  <div id="team" class="offset">
-
-
-
-  </div>
-  <!-- End Team -->
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <div class="container container-fluid">
-    <div class="row">
-      <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
-        <img
-          src="http://www.ruleoneinvesting.com/wp-content/uploads/2014/11/stock-market-trends-what-causes-stock-prices-to-change.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Stocks & Options</h5>
-          <p class="card-text">Pop on over and check out what the current market is doing in real time.</p>
-          <br>
-          <a href="https://www.marketwatch.com/investing/index/spx" target="_blank"
-            class="btn btn-primary">MarketWatch</a>
-        </div>
-      </div>
-      <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
-        <img src="https://tse4.mm.bing.net/th?id=OIP.GinTellswMwCgoOYXGct6gHaE8&pid=Api&P=0&w=242&h=162"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">ETF</h5>
-          <p class="card-text">Exchange Traded Fund... What is it? How can you benefit?</p>
-          <br>
-          <br>
-          <br>
-          <a href="https://www.investopedia.com/terms/e/etf.asp" target="_blank" class="btn btn-primary">Find Out
-            More</a>
-        </div>
-      </div>
-      <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
-        <img src="https://tse3.mm.bing.net/th?id=OIP.NrjMYSbBzIrVKXFCmhFD2AHaEZ&pid=Api&P=0&w=288&h=172"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Cryptocurrency</h5>
-          <p class="card-text">Strong cryptography. Decentralized Control. Distributed blockchain ledger.</p>
-          <br>
-          <br>
-
-          <a href="https://coinmarketcap.com/" target="_blank" class="btn btn-primary">Coin Market</a>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-10" style="color: white;">
-        <h4>Have other questions? &nbsp;Let us help you! &nbsp; Sign Up or Log In!</h4>
-      </div>
-    </div>
-  </div> -->
-
-
-  <!-- <div class="modal fade modalSignUp" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <div class="modal fade modalSignUp" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -398,10 +293,10 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body"> -->
+        <div class="modal-body">
 
   <!-- sign up form -->
-  <!-- <form id="signupForm">
+  <form id="signupForm">
             <div>
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp"
@@ -422,14 +317,14 @@
 
       </div>
     </div>
-  </div> -->
+  </div>
 
   <!-- Modal sign in-->
 
 
 
 
-  <!-- <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -439,10 +334,10 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body"> -->
+        <div class="modal-body">
 
   <!-- sign in form -->
-  <!-- <form id="signinForm">
+  <form id="signinForm">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="signinEmail" aria-describedby="emailHelp"
@@ -468,7 +363,7 @@
 
   </div>
   </div>
-  </div> -->
+  </div>
 
 
 
@@ -558,201 +453,3 @@
 
 
 
-<!-- This is the End of Nav Bar -->
-
-</div>
-<!-- End Home Scrolling -->
-
-
-
-
-
-
-
-<!-- Start CyptoApp -->
-<div id="cryptoApp" class="offset">
-
-
-
-
-
-</div>
-<!-- End CryptoApp -->
-
-
-
-
-<!-- Start Team -->
-<div id="team" class="offset">
-
-
-
-</div>
-<!-- End Team -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="container container-fluid">
-  <div class="row">
-    <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
-      <img
-        src="http://www.ruleoneinvesting.com/wp-content/uploads/2014/11/stock-market-trends-what-causes-stock-prices-to-change.jpg"
-        class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Stocks & Options</h5>
-        <p class="card-text">Pop on over and check out what the current market is doing in real time.</p>
-        <br>
-        <a href="https://www.marketwatch.com/investing/index/spx" target="_blank"
-          class="btn btn-primary">MarketWatch</a>
-      </div>
-    </div>
-    <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
-      <img src="https://tse4.mm.bing.net/th?id=OIP.GinTellswMwCgoOYXGct6gHaE8&pid=Api&P=0&w=242&h=162"
-        class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">ETF</h5>
-        <p class="card-text">Exchange Traded Fund... What is it? How can you benefit?</p>
-        <br>
-        <br>
-        <br>
-        <a href="https://www.investopedia.com/terms/e/etf.asp" target="_blank" class="btn btn-primary">Find Out
-          More</a>
-      </div>
-    </div>
-    <div class="card col-10 col-md-3 my-4" style="width: 18rem;">
-      <img src="https://tse3.mm.bing.net/th?id=OIP.NrjMYSbBzIrVKXFCmhFD2AHaEZ&pid=Api&P=0&w=288&h=172"
-        class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Cryptocurrency</h5>
-        <p class="card-text">Strong cryptography. Decentralized Control. Distributed blockchain ledger.</p>
-        <br>
-        <br>
-
-        <a href="https://coinmarketcap.com/" target="_blank" class="btn btn-primary">Coin Market</a>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col col-10" style="color: white;">
-      <h4>Have other questions? &nbsp;Let us help you! &nbsp; Sign Up or Log In!</h4>
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade modalSignUp" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body"> -->
-
-<!-- sign up form -->
-<!-- <form id="signupForm">
-          <div>
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp"
-              placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="signupPassword" placeholder="Password">
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-
-
-
-      </div>
-
-    </div>
-  </div>
-</div> -->
-
-<!-- Modal sign in-->
-
-
-
-<!-- 
-<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body"> -->
-
-<!-- sign in form -->
-<!-- <form id="signinForm">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="signinEmail" aria-describedby="emailHelp"
-              placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">Please sign in with your usual email</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="signinPassword" placeholder="Password">
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-
-
-
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-</div>
-</div>
-</div> -->
-
-
-
-<!-- This script tags are needed in order to have firebase to work -->
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCInM3op5WKAa4Btc6FwDSeIq9mOdyNXSA",
-    authDomain: "cryptoappp.firebaseapp.com",
-    databaseURL: "https://cryptoappp.firebaseio.com",
-    projectId: "cryptoappp",
-    storageBucket: "cryptoappp.appspot.com",
-    messagingSenderId: "823591748654",
-    appId: "1:823591748654:web:fab3eb977ad4c355c60bbf",
-    measurementId: "G-LV2V2T0TSG",
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-  //made auth and firestore reference
-  const auth = firebase.auth();
-  const dataBase = firebase.firestore();
