@@ -52,55 +52,57 @@
 
 
 
-let apiKey = "e838ab174e5a8f76c25a6becfa21fd618bd73751"
+// let apiKey = "e838ab174e5a8f76c25a6becfa21fd618bd73751"
 
-  async function createNewsChart() {
+//   async function createNewsChart() {
 
 
     
  
     
-    async function getData() {
-        const response = await fetch(`https://cryptopanic.com//api/v1/posts/?auth_token=e838ab174e5a8f76c25a6becfa21fd618bd73751`);
-        const data = await response.json();
+//     async function getData() {
+//         const response = await fetch(`https://cryptopanic.com//api/v1/posts/?auth_token=e838ab174e5a8f76c25a6becfa21fd618bd73751`);
+//         const data = await response.json();
     
       
-        
+//         console.log(data)
       
-    }
+//     }
 
-    await getData()
+//     await getData()
+//   }
+
+// createNewsChart()
 
 
+//     let ctx = document.getElementById('myTickerChart').getContext('2d');
+//     let chart = new Chart(ctx, {
+//         // The type of chart we want to create
+//         type: 'bar',
 
-    let ctx = document.getElementById('myTickerChart').getContext('2d');
-    let chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'bar',
+//         // The data for our dataset
+//         data: {
+//             labels: [cryto1Name, cryto2Name, cryto3Name],
+//             datasets: [{
+//                 label: "Cryto Leaderboard",
+//                 backgroundColor: 'rgb(245, 87, 66)',
+//                 borderColor: 'rgb(75, 66, 245)',
+//                 data: [crypto1Value, crypto2Value, crypto3Value],
+//             }]
+//         },
 
-        // The data for our dataset
-        data: {
-            labels: [cryto1Name, cryto2Name, cryto3Name],
-            datasets: [{
-                label: "Cryto Leaderboard",
-                backgroundColor: 'rgb(245, 87, 66)',
-                borderColor: 'rgb(75, 66, 245)',
-                data: [crypto1Value, crypto2Value, crypto3Value],
-            }]
-        },
-
-        // Configuration options go here
-        options: {
+//         // Configuration options go here
+//         options: {
                 
-                }
-    });
-  }
+//                 }
+//     });
+//   }
 
 
- placeHolderTickerChart() 
+//  placeHolderTickerChart() 
 
- let loadTicker = document.getElementById("loadTickerChart")
- loadTicker.addEventListener("click", function () {
-     console.log("You clicked me")
-     createTickChart()
- })
+//  let loadTicker = document.getElementById("loadTickerChart")
+//  loadTicker.addEventListener("click", function () {
+//      console.log("You clicked me")
+//      createTickChart()
+//  })
