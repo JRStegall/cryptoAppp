@@ -11,8 +11,9 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* background: linear-gradient(rgb(156, 221, 230), rgb(48,62,143)); */
-    background-color: #d4dde7;
+    /*background: linear-gradient(rgb(156, 221, 230), rgb(48,62,143));
+    background-color: #d4dde7;*/
+    background-image: url("img/stockImg.jpg");
     padding-bottom: 4rem;
 }
 
@@ -67,6 +68,9 @@ img {
     background-image: url(img/static.jpeg);
 }
 
+.chart {
+    background-color: rgb(240, 255, 255, 0.8);
+}
 
 .caption {
     
