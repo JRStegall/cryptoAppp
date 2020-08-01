@@ -63,7 +63,7 @@ img {
 }
 
 .home-inner {
-    background-image: url(img/static.jpeg);
+    background-image: url(img/bitcoinBackground2.jpg);
 }
 
 
@@ -85,7 +85,7 @@ img {
     font-size: 7rem;
     font-weight: 900;
     letter-spacing: .1rem;
-    color: #ba35ba;
+    color: #f12b2b;
     text-shadow: .1rem, .1rem, .6rem rgb(139, 59, 131);
 }
 
