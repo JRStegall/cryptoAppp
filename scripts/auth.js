@@ -55,7 +55,7 @@ loginForm.addEventListener("submit", (event) => {
 
     auth.signInWithEmailAndPassword(email, password).then(credential => {
         
-        window.location.href = "http://127.0.0.1:5500/cryptoAppp/dashboard.html"
+        window.location.href = "http://127.0.0.1:5500/dashboard.html"
     });
 })
 
