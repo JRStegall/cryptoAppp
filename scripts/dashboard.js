@@ -50,8 +50,6 @@
 
 // let newsContainer = document.getElementById("chartHolder")
 
-
-
 // let apiKey = "e838ab174e5a8f76c25a6becfa21fd618bd73751"
 
 //   async function createNewsChart() {
