@@ -11,9 +11,10 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* background: linear-gradient(rgb(156, 221, 230), rgb(48,62,143)); */
-    background-color: #343a40;
-    
+    /*background: linear-gradient(rgb(156, 221, 230), rgb(48,62,143));
+    background-color: #d4dde7;*/
+    background-image: url("img/stockImg.jpg");
+    padding-bottom: 4rem;
 }
 
 img {
@@ -32,6 +33,7 @@ img {
     font-size: 1.3rem;
     letter-spacing: .1rem;
     background: rgba(0 0,0,.5)!important;
+    
 
 }
 
@@ -46,7 +48,7 @@ img {
 
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #cb3cbf
+    color: #7f1f77
 }
 
 
@@ -62,10 +64,14 @@ img {
     text-transform: uppercase;
 }
 
-.home-inner {
-    background-image: url(img/bitcoinBackground2.jpg);
+.home-inner2 {
+    background-image: url(img/static.jpeg);
 }
 
+.chart {
+    background-color: rgb(240, 255, 255, 0.8);
+    width: 100%;
+}
 
 .caption {
     
@@ -82,18 +88,17 @@ img {
 }
 
 .caption h1 {
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 900;
     letter-spacing: .1rem;
-    color: #f12b2b;
-    text-shadow: .1rem, .1rem, .6rem rgb(139, 59, 131);
+    color: #7f1f77;
+    text-shadow: .1rem, .1rem, .6rem black;
 }
 
 .caption h4 {
-    font-size: 5rem;
+    font-size: 3rem;
     text-shadow: .1rem, .1rem, .6rem black;
-    color: #d443d4;
-    border-color: purple;
+    color: #7f1f77;
 }
 
 btn-lg {
@@ -102,8 +107,12 @@ btn-lg {
    
 }
 
-.jumbotron {
+.jumbotron-fluid {
     border-radius: 0;
+    /* background-image: url(/cryptoAppp/img/static.jpeg); */
+    background-size: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, .1);
 }
 
 .fixed {
@@ -156,7 +165,16 @@ btn-lg {
 }
 
 .card {
+   
+    
     margin: 0 auto;
+    width: 25rem;
+}
+
+#mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .col {
@@ -173,13 +191,55 @@ btn-lg {
     margin-top: 2%;
 }
 
-.card-body{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-} 
+
 
 .container-fluid {
     background-color: rgba(0,0,0, .1);
+    
+}
+
+.newsRow {
+    width: 80%;
+}
+
+#mainContent > div:nth-child(n) > div > img {
+    height: 14rem;
+    
+}
+
+/* BEGIN DASHBOARD LAYOUT */
+.dashboard-body{
+   height: 100rem 
+}
+
+.dashboard-h1{
+    display: flex;
+    font-size: 6rem;
+    justify-content: center;
+    align-content: center;
+    padding-top: 6rem;
+}
+
+.dashboard-col-body{
+    display: flex;
+   
+    align-content: center;
+    flex-direction: row;
+    height: 40rem;
+    background-color: rgb(188, 164, 164)
+    
+}
+
+#chartHolder {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+    height: 40rem;
+    width: 60rem;
+}
+
+#whyCrypto > div.container-fluid.p-5.border.chart > div > div.row.fixedTable > div {
+    width: 90%;
 }
 
