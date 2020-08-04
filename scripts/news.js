@@ -155,6 +155,7 @@ function createNewsChart () {
 		let cardBody = document.createElement("div");
 		let name = document.createElement("h5");
 		let image = document.createElement("img");
+		let url = document.createElement("a");
 		let description = document.createElement("p");
 		let mainContainer = document.getElementById("mainContent");
 		
@@ -163,16 +164,21 @@ function createNewsChart () {
 		name.classList.add("card-title")
 		image.classList.add("card-image-top")
 		description.classList.add("card-text")
+		url.classList.add(`btnbtn-primarystretched-link`)
 
+		console.log(data)
 
 		
 		name.innerHTML = data.value[i].name;
 		description.innerHTML = data.value[i].description;
 		image.src = data.value[i].image.thumbnail.contentUrl;
+		url.href= data.value[i].url
+		url.innerHTML = "Go to site!"
 
 		cardBody.appendChild(image);
 		cardBody.appendChild(name);
 		cardBody.appendChild(description);
+		cardBody.appendChild(url);
 		
 		container.appendChild(cardBody);
 		mainContainer.appendChild(container)
@@ -188,6 +194,6 @@ function createNewsChart () {
 let button = document.getElementById("loadNewsChart");
 
 button.addEventListener("click", function () {
-  console.log("You clicked me")
+  
   createNewsChart()
 })

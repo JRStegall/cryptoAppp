@@ -103,7 +103,7 @@
             >
           </li>
 
-          <li class="nav-item dropdown" class="loggedIn" style="display: none;">
+          <li class="nav-item dropdown" class="loggedIn"">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -141,53 +141,16 @@
       </div>
 
       <div class="col-12 text-center">
-        <h2 class="heading">Dashboard</h2>
+        <h2 class="heading" style="font-size: 5rem; background-color: seashell;">Dashboard</h2>
       </div>
-      <!-- <div class="col-12">
-          <div class="row">
-            <div class="col col-12 col-md-7 chart">
-              <div class="row">
-                <div class="col border mb-5" id="stocks">
-                  <canvas id="myChart" width="1000" height="500"></canvas>
-                  <div id="buttonWrapper">
-                    <button type="button" id="bitCoinDaily" class="btn btn-outline-primary btn-lg">Daily</button>
-                    <button type="button" id="bitCoinWeekly" class="btn btn-outline-primary">Weekly</button>
-                    <button type="button" id="bitCoinMonthly" class="btn btn-outline-primary">Monthly</button>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-4 border chart" id="chartHolder">
-                <canvas id="myTickerChart" width="5" height="10"></canvas>
-                <div id="buttonWrapper">
-                  <button type="button" id="loadTickerChart" class="btn btn-outline-primary btn-lg">Load Data</button>
-                </div>
-              </div>
-            </div>
+ 
 
-            <div class="col-md-4 border chart" id="chartHolder">
-              <div class="row">
-                <div class="col border" id="mainContent">
-                  <div id="buttonWrapper">
-                    <button type="button" id="loadNewsChart" class="btn btn-outline-primary btn-lg">Load Data</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-    </div> -->
-
-      <div class="container-fluid p-5">
+      <div class="container-fluid p-5 border chart">
         <div class="row">
           <!-- This is the section that populates the stock data -->
-          <div class="col-md-8">
+          <div class="col-sm-6 d-none d-lg-block chart">
             <div class="col border mb-5" id="stocks">
-              <canvas id="myChart" width="1000" height="500"></canvas>
+              <canvas id="myChart"></canvas>
               <div id="buttonWrapper">
                 <button
                   type="button"
@@ -215,40 +178,38 @@
           </div>
 
           <!-- This is the section that populates the news data -->
-          <div class="col-md-4">
-            <div class="col-md-4 border chart" id="chartHolder">
-              <div class="row">
-                <div class="col border" id="mainContent">
-                  <div id="buttonWrapper">
-                    <button
-                      type="button"
-                      id="loadNewsChart"
-                      class="btn btn-outline-primary btn-lg"
-                    >
-                      Load Data
-                    </button>
-                  </div>
-                </div>
-              </div>
+        
+          <div class="col-md-6 d-none d-lg-block chart">
+            <div id="chartHolder">
+              <canvas id="myTickerChart"></canvas>
+              
             </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-8"">
-          <div class="col-md-4 border" id="chartHolder">
-            <canvas id="myTickerChart" width="1000" height="500"></canvas>
             <div id="buttonWrapper">
               <button
                 type="button"
                 id="loadTickerChart"
                 class="btn btn-outline-primary btn-lg"
               >
-                Load Data
+                Load Pie Chart
               </button>
             </div>
           </div>
         </div>
+
+          <div class="col-md-12" id="mainContent">
+            
+          </div>
+          <div id="buttonWrapper">
+            <button
+              type="button"
+              id="loadNewsChart"
+              class="btn btn-outline-primary btn-lg chart"
+            >
+              Load Finance News
+            </button>
+          </div>
+        </div>
+      
       </div>
     
 
@@ -277,14 +238,15 @@
       const auth = firebase.auth();
       const dataBase = firebase.firestore();
     </script>
-
-    <script src="scripts/userauth.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/userauth.js"></script>
+    
 
     <script src="scripts/market.js"></script>
     <script src="scripts/chart.js"></script>
     <script src="scripts/news.js"></script>
-    <script src="scripts/auth.js"></script>
+    
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
   </body>
 </html>

@@ -70,6 +70,7 @@ img {
 
 .chart {
     background-color: rgb(240, 255, 255, 0.8);
+    width: 100%;
 }
 
 .caption {
@@ -164,7 +165,16 @@ btn-lg {
 }
 
 .card {
+   
+    
     margin: 0 auto;
+    width: 25rem;
+}
+
+#mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .col {
@@ -181,14 +191,55 @@ btn-lg {
     margin-top: 2%;
 }
 
-.card-body{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-} 
+
 
 .container-fluid {
     background-color: rgba(0,0,0, .1);
     
+}
+
+.newsRow {
+    width: 80%;
+}
+
+#mainContent > div:nth-child(n) > div > img {
+    height: 14rem;
+    
+}
+
+/* BEGIN DASHBOARD LAYOUT */
+.dashboard-body{
+   height: 100rem 
+}
+
+.dashboard-h1{
+    display: flex;
+    font-size: 6rem;
+    justify-content: center;
+    align-content: center;
+    padding-top: 6rem;
+}
+
+.dashboard-col-body{
+    display: flex;
+   
+    align-content: center;
+    flex-direction: row;
+    height: 40rem;
+    background-color: rgb(188, 164, 164)
+    
+}
+
+#chartHolder {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+    height: 40rem;
+    width: 60rem;
+}
+
+#whyCrypto > div.container-fluid.p-5.border.chart > div > div.row.fixedTable > div {
+    width: 90%;
 }
 
