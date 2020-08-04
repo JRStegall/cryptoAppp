@@ -64,9 +64,9 @@ img {
     text-transform: uppercase;
 }
 
-.home-inner2 {
+/*.home-inner2 {
     background-image: url(img/static.jpeg);
-}
+}*/
 
 .chart {
     background-color: rgb(240, 255, 255, 0.8);
