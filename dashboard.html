@@ -1,227 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
 
-    <link rel="stylesheet" href="dashboardstyle.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="mainPage.css" />
+  <link rel="stylesheet" href="dashboardstyle.css" />
 
-    <link rel="text" href="index.html" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <!-- <link rel="stylesheet" href="mainPage.css" /> -->
 
-  <body>
-    <!-- START NAV -->
+  <link rel="text" href="index.html" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</head>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="index.html">
-        <img
-          src="https://img.icons8.com/dusk/64/000000/bitcoin.png"
-          width="30px"
-          height="30px"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarResponsive"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<body>
+  <!-- START NAV -->
 
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link loggedOut" href="#home">Home</a>
-          </li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="https://img.icons8.com/dusk/64/000000/bitcoin.png" width="50px" height="50px" alt="" loading="lazy" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <li class="nav-item">
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link loggedIn" style="display: none;" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="signinform" href="#signin" class="loggedOut" data-toggle="modal"
+            data-target="#exampleModal2">Sign In</a>
+        </li>
+
+        <li class="nav-item dropdown" class="loggedIn"">
             <a
-              class="nav-link loggedOut"
-              style="display: none;"
-              href="#whyCrypto"
-              >Why Crytpo</a
-            >
-          </li>
+              class=" nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item loggedIn" href="#">Account</a>
+            <a class="dropdown-item loggedIn" id="logout">Log Out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-          <li class="nav-item">
-            <a class="nav-link loggedOut" style="display: none;" href="#team"
-              >Team</a
-            >
-          </li>
+  <div class="landing2">
+    <div class="home-wrap2">
+      <div class="home-inner2"></div>
+    </div>
+  </div>
 
-          <li class="nav-item">
-            <a class="nav-link loggedOut" style="display: none;" href="#tech"
-              >Tech</a
-            >
-          </li>
+  <div class="caption text-center">
+    <h1 class="display-4"></h1>
+    <h4 class="lead"></h4>
+  </div>
 
-          <li class="nav-item">
-            <a
-              class="nav-link loggedIn"
-              style="display: none;"
-              href="/cryptoAppp/dashboard.html"
-              >Dashboard</a
-            >
-          </li>
+  <div id="whyCrypto" class="offset">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="narrow">
 
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              id="signinform"
-              href="#signin"
-              class="loggedOut"
-              data-toggle="modal"
-              data-target="#exampleModal2"
-              >Sign In</a
-            >
-          </li>
-
-          <li class="nav-item dropdown" class="loggedIn"">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item loggedIn" href="#">Account</a>
-              <a class="dropdown-item loggedIn" id="logout">Log Out</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="landing2">
-      <div class="home-wrap2">
-        <div class="home-inner2"></div>
       </div>
     </div>
 
-    <div class="caption text-center">
-      <h1 class="display-4"></h1>
-      <h4 class="lead"></h4>
+    <div class="col-12 text-center">
+      <h2 class="heading">Dashboard</h2>
     </div>
 
-    <div id="whyCrypto" class="offset">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="narrow"></div>
-      </div>
 
-      <div class="col-12 text-center">
-        <h2 class="heading" style="font-size: 5rem; background-color: seashell;">Dashboard</h2>
-      </div>
- 
+    <div class="container-fluid p-1 border chart">
+      <div class="row">
+        <!-- <div class="col col-12 col-md-7">
 
-      <div class="container-fluid p-5 border chart">
-        <div class="row">
-<<<<<<< HEAD
-            <div class="col col-12 col-md-7">
-                
-                
-            </div>
-            <div class="col col-12 col-md-4 border">
-                <h2>COl-4</h2>
-                
-=======
+
+        </div> -->
+        <div class="col col-10 ">
+
+          <br />
+
           <!-- This is the section that populates the stock data -->
-          <div class="col-sm-6 d-none d-lg-block chart">
+          <div class="col-12 d-lg-block chart">
             <div class="col border mb-5" id="stocks">
               <canvas id="myChart"></canvas>
               <div id="buttonWrapper">
-                <button
-                  type="button"
-                  id="bitCoinDaily"
-                  class="btn btn-outline-primary btn-lg"
-                >
+                <button type="button" id="bitCoinDaily" class="btn btn-outline-primary chbtn">
                   Daily
                 </button>
-                <button
-                  type="button"
-                  id="bitCoinWeekly"
-                  class="btn btn-outline-primary"
-                >
+                <button type="button" id="bitCoinWeekly" class="btn btn-outline-primary chbtn">
                   Weekly
                 </button>
-                <button
-                  type="button"
-                  id="bitCoinMonthly"
-                  class="btn btn-outline-primary"
-                >
+                <button type="button" id="bitCoinMonthly" class="btn btn-outline-primary chbtn">
                   Monthly
                 </button>
               </div>
+              <br />
             </div>
           </div>
 
           <!-- This is the section that populates the news data -->
-        
-          <div class="col-md-6 d-none d-lg-block chart">
+
+          <div class="col-12  d-lg-block chart">
             <div id="chartHolder">
               <canvas id="myTickerChart"></canvas>
-              
+
             </div>
             <div id="buttonWrapper">
-              <button
-                type="button"
-                id="loadTickerChart"
-                class="btn btn-outline-primary btn-lg"
-              >
-                Load Pie Chart
+              <button type="button" id="loadTickerChart" class="btn btn-outline-primary">
+                Load Bar Graph
               </button>
->>>>>>> bryanbranch
             </div>
+            <br />
           </div>
         </div>
 
-          <div class="col-md-12" id="mainContent">
-            
-          </div>
+        <div class="container col-10" id="mainContent">
+
+          <button type="button" id="loadNewsChart" class="btn btn-outline-primary btn-lg chart">
+            Load Finance News
+          </button>
           <div id="buttonWrapper">
-            <button
-              type="button"
-              id="loadNewsChart"
-              class="btn btn-outline-primary btn-lg chart"
-            >
-              Load Finance News
-            </button>
+
           </div>
         </div>
-      
       </div>
-    
+
+    </div>
+
+  
+
 
     <!-- This script tags are needed in order to have firebase to work -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -251,12 +174,13 @@
     <script src="scripts/index.js"></script>
     <script src="scripts/auth.js"></script>
     <script src="scripts/userauth.js"></script>
-    
+
 
     <script src="scripts/market.js"></script>
     <script src="scripts/chart.js"></script>
     <script src="scripts/news.js"></script>
-    
+
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
-  </body>
+</body>
+
 </html>

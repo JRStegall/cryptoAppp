@@ -66,18 +66,18 @@ img {
     background-image: url(img/bitcoinBackground2.jpg);
 }
 
+.container{
+    margin: auto 0;
+}
 
 .caption {
-    
-    width: 100%;
     max-width: 100%;
     position: absolute;
     top: 40%;
     /* Z index will let me display over content just FYI */
     z-index: 1;
-    color: white;
+    background-color: hsl(208, 100%, 97%, 0.8);
     text-transform: uppercase;
-    font-size: 8rem;
    
 }
 
@@ -86,7 +86,7 @@ img {
     font-weight: 900;
     letter-spacing: .1rem;
     color: #f12b2b;
-    text-shadow: .1rem, .1rem, .6rem rgb(139, 59, 131);
+    text-shadow: 1px 1px 1px rgb(15, 14, 15);
 }
 
 .caption h4 {
@@ -94,7 +94,42 @@ img {
     text-shadow: .1rem, .1rem, .6rem black;
     color: #d443d4;
     border-color: purple;
+    text-shadow: 1px 1px 1px rgb(15, 14, 15);
+
 }
+
+@media only screen and (max-width: 700px){
+     .caption {
+        max-width: 100%;
+        position: absolute;
+        top: 40%;
+        /* Z index will let me display over content just FYI */
+        z-index: 1;
+        background-color: hsl(208, 100%, 97%, 0.8);        
+        text-transform: uppercase;
+        font-size: 8rem;
+       
+    }
+
+    .caption h1 {
+        font-size: 3.5rem; 
+        font-weight: 900;
+        letter-spacing: .1rem;
+        color: #f12b2b;
+        text-shadow: 1px 1px 1px rgb(15, 14, 15);
+    }
+    
+    .caption h4 {
+        font-size: 3rem;
+        text-shadow: .1rem, .1rem, .6rem black;
+        color: #d443d4;
+        border-color: purple;
+        text-shadow: 1px 1px 1px rgb(15, 14, 15);
+
+    } 
+}
+
+
 
 btn-lg {
    font-size: 2rem;

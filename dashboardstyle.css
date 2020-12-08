@@ -14,18 +14,11 @@ body {
     /*background: linear-gradient(rgb(156, 221, 230), rgb(48,62,143));
     background-color: #d4dde7;*/
     background-image: url("img/stockImg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding-bottom: 4rem;
 }
 
-img {
-    height: 2rem;
-}
-
-#home > div.caption.text-center > a{
-    color: purple;
-    border: purple;
-    font-size: 2rem;
-}
 
 .navbar{
     text-transform: uppercase;
@@ -52,20 +45,9 @@ img {
 }
 
 
-.narrow {
-    width: 80%;
-    margin: 2rem auto;
-    padding-top: 3rem;
-}
-
-.narrow h2 {
-    font-size: 4rem;
-    padding-bottom: 5rem;
-    text-transform: uppercase;
-}
-
-.home-inner2 {
-    background-image: url(img/static.jpeg);
+.heading {
+    font-size: 5rem; 
+    background-color: seashell;
 }
 
 .chart {
@@ -73,84 +55,17 @@ img {
     width: 100%;
 }
 
-.caption {
-    
-    width: 100%;
-    max-width: 100%;
-    position: absolute;
-    top: 40%;
-    /* Z index will let me display over content just FYI */
-    z-index: 1;
-    color: white;
-    text-transform: uppercase;
-    font-size: 8rem;
-   
+.card {
+    display: inline-flex;
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 30rem;
+    background-color: rgb(255, 255, 255, 0.8);
 }
 
-.caption h1 {
-    font-size: 6rem;
-    font-weight: 900;
-    letter-spacing: .1rem;
-    color: #7f1f77;
-    text-shadow: .1rem, .1rem, .6rem black;
+.card-image-top {
+    width: auto;
 }
-
-.caption h4 {
-    font-size: 3rem;
-    text-shadow: .1rem, .1rem, .6rem black;
-    color: #7f1f77;
-}
-
-btn-lg {
-   font-size: 2rem;
-   border-radius: 0;
-   
-}
-
-.jumbotron-fluid {
-    border-radius: 0;
-    /* background-image: url(/cryptoAppp/img/static.jpeg); */
-    background-size: 100%;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, .1);
-}
-
-.fixed {
-    background-image: url(img/wallstreet.jpeg);
-    z-index: -1;
-}
-
-#dark{
-    background-color: rgba(0,0,0, .6);
-}
-
-.fixed-background {
-    padding-top: 3rem;
-    color: white;
-    padding-bottom: 5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-#home > div.team > div > div.row.dark.text-center > div.col-12.text-center > h3 {
-    text-transform: uppercase;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    font-size: 4rem;
-}
-
-#footer{
-    background-color: #343a40;
-    color: white;
-    padding: 2rem 0 2rem;
-    margin-top: 2rem;
-}
-
-#teamRow {
-    margin: 10%
-}
-
-
 
 .card-title {
     text-decoration: underline;
@@ -164,18 +79,18 @@ btn-lg {
     margin-top: 5%;
 }
 
-.card {
-   
-    
-    margin: 0 auto;
-    width: 25rem;
-}
-
 #mainContent {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 2%;
     justify-content: space-evenly;
 }
+
+#loadNewsChart {
+    width: 80%;
+    margin: auto;
+}
+
 
 .col {
     margin: 0 auto;
@@ -183,15 +98,13 @@ btn-lg {
 
 .mb-3{
     height: 200px;
-}
+} 
 
 #signIn {
     width: 50%;
     margin-bottom: 5%;
     margin-top: 2%;
 }
-
-
 
 .container-fluid {
     background-color: rgba(0,0,0, .1);
@@ -200,11 +113,6 @@ btn-lg {
 
 .newsRow {
     width: 80%;
-}
-
-#mainContent > div:nth-child(n) > div > img {
-    height: 14rem;
-    
 }
 
 /* BEGIN DASHBOARD LAYOUT */
@@ -222,7 +130,6 @@ btn-lg {
 
 .dashboard-col-body{
     display: flex;
-   
     align-content: center;
     flex-direction: row;
     height: 40rem;
@@ -234,12 +141,23 @@ btn-lg {
     display: flex;
     justify-content: space-around;
     align-content: center;
-
-    height: 40rem;
-    width: 60rem;
+    height: auto;
 }
 
-#whyCrypto > div.container-fluid.p-5.border.chart > div > div.row.fixedTable > div {
-    width: 90%;
+@media only screen and (max-width: 700px){
+    .heading {
+        font-size: 3rem;
+    }
+    
+    #loadTickerChart{
+        width: 100%;
+        margin: auto;
+    }
+    .chbtn{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+
 }
 
